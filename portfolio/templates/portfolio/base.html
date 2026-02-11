@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliyu Bin Ahmad | Portfolio</title>
+    <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#hero" class="logo">Bin</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#tech-lab">Tech Lab</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Aliyu Bin Ahmad | Built with Django</p>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href"))
+                        .scrollIntoView({ behavior: "smooth" });
+            });
+        });
+
+        const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+});
+
+document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+});
+
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+
+    </script> <script> 
+        AOS.init({
+             duration: 1200, // animation speed 
+             once: true, // animate only once });
+         </script>
+</body>
+</html>

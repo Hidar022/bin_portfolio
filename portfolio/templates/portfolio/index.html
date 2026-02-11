@@ -1,0 +1,60 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+<section id="hero" class="hero">
+    <div class="hero-text">
+        <h1 class="animate-text">Aliyu Bin Ahmad</h1>
+        <p class="animate-subtext">Software Engineer & Cybersecurity Student</p>
+        <img src="{% static 'image/bin_headshot.jpg' %}" alt="Aliyu Bin Ahmad" class="headshot">
+        <p class="hero-desc">Passionate about building secure, scalable software solutions. I blend creativity with technical precision to craft tools that empower people and protect systems.</p>
+    </div>
+</section>
+
+<section id="tech-lab" class="tech-lab">
+    <h2 class="animate-title">Technical Lab</h2>
+    <ul>
+        <li class="animate-list">Python Expertise: Django, FastAPI, Automation</li>
+        <li class="animate-list">Currently Exploring Ethical Hacking (Student Researcher)</li>
+        <li class="animate-list">Strong foundation in REST APIs, database design, and cloud deployment</li>
+        <li class="animate-list">Always experimenting with new frameworks and security practices</li>
+    </ul>
+</section>
+
+<section id="projects" class="projects">
+    <h2 class="animate-title">Projects</h2>
+    <div class="grid">
+        <div class="card" data-aos="zoom-in">
+            <h3>Tailoring Website</h3>
+            <p>A modern web app for tailoring services with booking and catalog features.</p>
+            <a href="YOUR_TAILORING_LINK" target="_blank" class="btn call">Visit Site</a>
+        </div>
+
+        <div class="card" data-aos="zoom-in">
+            <h3>KSITM-VLCP</h3>
+            <p>Virtual Learning and Collaboration Platform for KSITM students and faculty.</p>
+            <a href="YOUR_KSITM_LINK" target="_blank" class="btn call">Explore Platform</a>
+        </div>
+
+        <div class="card" data-aos="zoom-in">
+            <h3>BIN_CHAT</h3>
+            <p>A real-time chat application built with Python and WebSockets.</p>
+            <a href="YOUR_BINCHAT_LINK" target="_blank" class="btn call">Try Chat App</a>
+        </div>
+
+        <div class="card" data-aos="zoom-in">
+            <h3>Django Portfolio</h3>
+            <p>This very portfolio site—crafted with Django templates, responsive design, and neon aesthetics.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="animate-title">Let’s Build Together</h2>
+    <p>If you’re looking for a developer who thrives on challenges and loves exploring cybersecurity, I’d love to hear from you.</p>
+    <p>Email: <a href="mailto:aliyubinahmad2022@gmail.com">aliyubinahmad2022@gmail.com</a></p>
+    <div class="contact-buttons">
+        <a href="https://wa.me/2349038047335" class="btn whatsapp animate-btn">WhatsApp Me</a>
+        <a href="tel:+234916896477" class="btn call animate-btn">Call Me</a>
+    </div>
+</section>
+{% endblock %}
