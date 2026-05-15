@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-9v7n4-)+ek+l%)b1r^e_l5k3*r0_vhg-#es5ha53aw%!^rnl*!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['bin-portfolio.vercel.app']
+ALLOWED_HOSTS = [
+    'bin-portfolio.vercel.app',
+    '.vercel.app',        # This allows all Vercel preview deployment URLs
+    'localhost',          # Keeps local development working
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -128,8 +133,8 @@ STATICFILES_DIRS = [
 
 # CRITICAL FIX: Match this to your actual Vercel URL
 CSRF_TRUSTED_ORIGINS = [
-    'https://bin-portfolio.vercel.app'
+    'https://bin-portfolio.vercel.app',
+    'https://*.vercel.app',
 ]
-
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
